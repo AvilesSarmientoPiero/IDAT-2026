@@ -1,0 +1,51 @@
+*, *::after, *::before{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primario: #0702ff;
+    --color-secundario: #9c0a9c;
+    --color-texto: #fff;
+    --radio-boton:5px;
+}
+
+
+body{
+    font-family: "Libre Caslon Condensed", serif;
+}
+
+h1{
+    color: var(--color-primario)
+}
+
+p{
+    color: var(--color-secundario)
+}
+
+.boton{
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    border-radius: var(--radio-boton);
+    padding: 10px 15px 10px 15px;
+}
+
+.boton:hover{
+    background-color: var(--color-secundario);
+}
+
+section{
+    background-color: rgb(151, 220, 241);
+}
+
+.seccion-botones{
+    margin: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-radius: var(--radio-boton);
+    border-color: var(--color-primario);
+    background-color: beige;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+html{
+    font-family: "Libre Caslon Condensed", serif;
+}
+h1 {
+    color: blue;
+    font-size: 32px;
+    text-align: center;
+}
+
+p {
+    color: cadetblue;
+    font-size: 12px;
+}
+
+.parrafo {
+    color: rgb(139, 27, 245);
+    font-size: 12px;
+}
+
+#pag2-par2 {
+    color: rgb(221, 13, 13);
+    font-size: 12px;
+}
+
+.seccion {
+    background-color: gray;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 50px 0 50px 0;
+}
