@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h2>Mi Proyecto de Origen Café</h2>
+
+        <table border="1">
+            <caption>Origen Café</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Destino</th>
+                    <th scope="col">Tiempo estimado</th>
+                    <th scope="col">Costo (hasta 2 kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Café Spress</td>
+                    <td>24 a 48 horas</td>
+                    <td>S/ 20.00</td>
+                </tr>
+                <tr>
+                    <td>Bourbon Rojo</td>
+                    <td>1 a 2 días hábiles</td>
+                    <td>S/ 15.00</td>
+                </tr>
+                <tr>
+                    <td>Café Negro</td>
+                    <td>2 a 4 días hábiles</td>
+                    <td>S/ 25.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">* Envíos gratuitos en Lima y Provincia a S/ 120.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+
+</html>
+
+<section>
+    <h2>Separa tu Pedido o Escríbenos</h2>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos de Contacto y Reserva</legend>
+
+            <p>
+                <label for="contacto-nombre">Nombre completo:</label>
+                <input type="text" id="contacto-nombre" name="nombre" required>
+            </p>
+
+            <p>
+                <label for="contacto-email">Correo electrónico:</label>
+                <input type="email" id="contacto-email" name="correo" required>
+            </p>
+
+            <p>
+                <label for="contacto-telefono">Teléfono o WhatsApp (9 dígitos):</label>
+                <input type="tel" id="contacto-telefono" name="telefono" pattern="[0-9]{9}" required>
+            </p>
+
+            <p>
+                <label for="contacto-tipo">Tipo de cliente:</label>
+                <select id="contacto-tipo" name="tipo" required>
+                    <option value="">-- Elige una opción --</option>
+                    <option value="personal">Café Spress</option>
+                    <option value="cafeteria">Borubon Rojo</option>
+                    <option value="corporativo">Café Negro</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="contacto-mensaje">Mensaje o detalle de granos requeridos:</label>
+                <textarea id="contacto-mensaje" name="mensaje" rows="4" required></textarea>
+            </p>
+
+            <button type="submit">Enviar Solicitud</button>
+        </fieldset>
+    </form>
+</section>
