@@ -1,0 +1,335 @@
+Para desarrollar este proyecto en VS Code utilizando Bootstrap 5 (tal como se indica en la estructura del documento), aquí tienes el código completo y optimizado en un único archivo index.html.
+🚀 Pasos para configurarlo en VS Code:
+ * Abre VS Code y crea una nueva carpeta para tu proyecto (por ejemplo, tienda-deportiva).
+ * Crea un archivo llamado index.html dentro de esa carpeta.
+ * Copia todo el código que se muestra más abajo y pégalo en tu archivo index.html.
+ * Si tienes instalada la extensión Live Server en VS Code, haz clic derecho sobre el editor y selecciona "Open with Live Server" para visualizar la página web funcionando en tu navegador.
+💻 Código completo (index.html)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vértice Sport | Equípate para ir más lejos</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #212529;
+        }
+        .bg-dark-custom {
+            background-color: #111;
+        }
+        .text-lime {
+            color: #d4ff00 !important;
+        }
+        .btn-lime {
+            background-color: #d4ff00;
+            color: #111;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-lime:hover {
+            background-color: #bce000;
+            color: #111;
+        }
+        .top-bar {
+            background-color: #111;
+            color: #fff;
+            font-size: 0.85rem;
+            padding: 8px 0;
+            text-align: center;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+        }
+        .card-category {
+            border: none;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        .card-category:hover {
+            transform: translateY(-5px);
+        }
+        .product-card {
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .badge-custom {
+            font-size: 0.75rem;
+            padding: 5px 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Envío gratis en compras mayores a S/250[span_1](start_span)[span_1](end_span). ¡Equípate. Entrena. Supérate[span_2](start_span)[span_2](end_span)!
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark fs-3" href="#">
+                <span class="text-dark">VÉRTICE</span> <span style="color: #666;">SPORT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#categorias">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#comunidad">Comunidad</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#faq">Preguntas Frecuentes</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-dark rounded-circle p-2 lh-1"><i class="bi bi-bag"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-light text-dark mb-3 px-3 py-2 fw-bold text-uppercase">Rendimiento sin límites[span_3](start_span)[span_3](end_span)</span>
+                    <h1 class="display-3 fw-bold mb-3">Tu próximo nivel <br>empieza hoy[span_4](start_span)[span_4](end_span).</h1>
+                    <p class="lead mb-4">Encuentra el equipamiento que acompaña tu esfuerzo. Tecnología, comodidad y estilo para cada movimiento[span_5](start_span)[span_5](end_span).</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#productos" class="btn btn-lime btn-lg px-4 py-3">Comprar ahora[span_6](start_span)[span_6](end_span)</a>
+                        <a href="#categorias" class="btn btn-outline-light btn-lg px-4 py-3">Explorar categorías[span_7](start_span)[span_7](end_span)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="bg-dark-custom text-white py-4">
+        <div class="container">
+            <div class="row text-center gy-3">
+                <div class="col-md-4">
+                    <h3 class="fw-bold text-lime mb-1">+5 mil[span_8](start_span)[span_8](end_span)</h3>
+                    <p class="mb-0 text-muted">Deportistas equipados[span_9](start_span)[span_9](end_span)</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold text-lime mb-1">4.9/5[span_10](start_span)[span_10](end_span)</h3>
+                    <p class="mb-0 text-muted">Valoración promedio[span_11](start_span)[span_11](end_span)</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="fw-bold text-lime mb-1">100%[span_12](start_span)[span_12](end_span)</h3>
+                    <p class="mb-0 text-muted">Actitud deportiva[span_13](start_span)[span_13](end_span)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Benefits -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="p-3 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-truck fs-1 text-dark mb-2"></i>
+                        <h5 class="fw-bold">Envíos a todo el Perú</h5>
+                        <p class="text-muted small mb-0">Rápidos y seguros[span_14](start_span)[span_14](end_span)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-arrow-repeat fs-1 text-dark mb-2"></i>
+                        <h5 class="fw-bold">Cambios fáciles</h5>
+                        <p class="text-muted small mb-0">Hasta 30 días[span_15](start_span)[span_15](end_span)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-shield-check fs-1 text-dark mb-2"></i>
+                        <h5 class="fw-bold">Compra protegida</h5>
+                        <p class="text-muted small mb-0">Tu seguridad primero[span_16](start_span)[span_16](end_span)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 bg-white rounded-3 shadow-sm h-100">
+                        <i class="bi bi-headset fs-1 text-dark mb-2"></i>
+                        <h5 class="fw-bold">Atención personalizada</h5>
+                        <p class="text-muted small mb-0">Estamos para ayudarte[span_17](start_span)[span_17](end_span)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorias" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold text-muted small">Encuentra tu disciplina[span_18](start_span)[span_18](end_span)</span>
+                <h2 class="fw-bold display-5">Explora por categoría[span_19](start_span)[span_19](end_span)</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-category bg-dark text-white p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="small text-lime fw-bold">01 / RESISTENCIA[span_20](start_span)[span_20](end_span)</span>
+                            <h3 class="fw-bold mt-2">Running[span_21](start_span)[span_21](end_span)</h3>
+                        </div>
+                        <a href="#productos" class="text-white text-decoration-none d-flex justify-content-between align-items-center mt-4">
+                            Ver productos <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-category bg-dark text-white p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="small text-lime fw-bold">02 / POTENCIA[span_22](start_span)[span_22](end_span)</span>
+                            <h3 class="fw-bold mt-2">Training[span_23](start_span)[span_23](end_span)</h3>
+                        </div>
+                        <a href="#productos" class="text-white text-decoration-none d-flex justify-content-between align-items-center mt-4">
+                            Ver productos <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-category bg-dark text-white p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="small text-lime fw-bold">03 / EQUIPO[span_24](start_span)[span_24](end_span)</span>
+                            <h3 class="fw-bold mt-2">Fútbol[span_25](start_span)[span_25](end_span)</h3>
+                        </div>
+                        <a href="#productos" class="text-white text-decoration-none d-flex justify-content-between align-items-center mt-4">
+                            Ver productos <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-category bg-dark text-white p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="small text-lime fw-bold">04 / COMPLEMENTOS[span_26](start_span)[span_26](end_span)</span>
+                            <h3 class="fw-bold mt-2">Accesorios[span_27](start_span)[span_27](end_span)</h3>
+                        </div>
+                        <a href="#productos" class="text-white text-decoration-none d-flex justify-content-between align-items-center mt-4">
+                            Ver productos <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase fw-bold text-muted small">Selección Vértice[span_28](start_span)[span_28](end_span)</span>
+                <h2 class="fw-bold display-5">Lo que necesitas para dar más[span_29](start_span)[span_29](end_span)</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card p-4 position-relative h-100 d-flex flex-column">
+                        <span class="badge bg-dark badge-custom position-absolute top-0 start-0 m-3">NUEVO[span_30](start_span)[span_30](end_span)</span>
+                        <div class="text-center py-4">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Zapatillas Velocity Run" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;">
+                        </div>
+                        <div class="mt-auto">
+                            <span class="text-muted small text-uppercase">Running[span_31](start_span)[span_31](end_span)</span>
+                            <h5 class="fw-bold mb-1">Zapatillas Velocity Run[span_32](start_span)[span_32](end_span)</h5>
+                            <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.9 Opiniones de clientes[span_33](start_span)[span_33](end_span)</div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold fs-5">S/289[span_34](start_span)[span_34](end_span)</span>
+                                    <span class="text-muted text-decoration-through small ms-2">S/349[span_35](start_span)[span_35](end_span)</span>
+                                </div>
+                                <button class="btn btn-dark rounded-circle"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card p-4 position-relative h-100 d-flex flex-column">
+                        <div class="text-center py-4">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=400&q=80" alt="Balón Pro Match" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;">
+                        </div>
+                        <div class="mt-auto">
+                            <span class="text-muted small text-uppercase">Fútbol[span_36](start_span)[span_36](end_span)</span>
+                            <h5 class="fw-bold mb-1">Balón Pro Match[span_37](start_span)[span_37](end_span)</h5>
+                            <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.9 Opiniones de clientes[span_38](start_span)[span_38](end_span)</div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5">S/129[span_39](start_span)[span_39](end_span)</span>
+                                <button class="btn btn-dark rounded-circle"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card p-4 position-relative h-100 d-flex flex-column">
+                        <span class="badge bg-danger badge-custom position-absolute top-0 start-0 m-3">OFERTA[span_40](start_span)[span_40](end_span)</span>
+                        <div class="text-center py-4">
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=400&q=80" alt="Polo técnico Dry Move" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;">
+                        </div>
+                        <div class="mt-auto">
+                            <span class="text-muted small text-uppercase">Training[span_41](start_span)[span_41](end_span)</span>
+                            <h5 class="fw-bold mb-1">Polo técnico Dry Move[span_42](start_span)[span_42](end_span)</h5>
+                            <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.8 Opiniones de clientes[span_43](start_span)[span_43](end_span)</div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold fs-5">S/89[span_44](start_span)[span_44](end_span)</span>
+                                    <span class="text-muted text-decoration-through small ms-2">S/119[span_45](start_span)[span_45](end_span)</span>
+                                </div>
+                                <button class="btn btn-dark rounded-circle"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card p-4 position-relative h-100 d-flex flex-column">
+                        <span class="badge bg-dark badge-custom position-absolute top-0 start-0 m-3">NUEVO[span_46](start_span)[span_46](end_span)</span>
+                        <div class="text-center py-4">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=400&q=80" alt="Zapatillas Core Training" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;">
+                        </div>
+                        <div class="mt-auto">
+                            <span class="text-muted small text-uppercase">Training[span_47](start_span)[span_47](end_span)</span>
+                            <h5 class="fw-bold mb-1">Zapatillas Core Training[span_48](start_span)[span_48](end_span)</h5>
+                            <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i> 4.8 Opiniones de clientes[span_49](start_span)[span_49](end_span)</div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5">S/249[span_50](start_span)[span_50](end_span)</span>
+                                <button class="btn btn-dark rounded-circle"><i class="bi bi-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card p-4 position-relative h-100 d-flex flex-column">
+                        <span class="badge bg-danger badge-custom position-absolute top-0 start-0 m-3">OFERTA[span_51](start_span)[span_51](end_span)</span>
+                        <div class="text-center py-4">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Short Runner Flex" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;">
+                        </div>
+                        <div class="mt-auto">
+                            <span class="text-muted small text-uppercase">Running[span_52](start_span)[
